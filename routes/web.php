@@ -1,14 +1,17 @@
 <?php
 
+use App\Http\Controllers\jurusanController;
 use App\Http\Controllers\profileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('dashboard', function () {
+Route::get('/', function () {
     return view('dashboard');
 });
 
 Route::resource('profile', profileController::class);
+
+Route::resource('jurusan', jurusanController::class);
